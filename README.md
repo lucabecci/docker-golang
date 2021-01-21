@@ -14,13 +14,13 @@ You will need this requeriments for good rendiment:
 ### How to run th app with docker
 
 1. In your terminal, navigate to the main directory.
-2. Run `docker build . -t go-channels` to create image.
-3. Run `docker run go-channels` to run the image.
+2. Run `docker build . -t go-docker` to create image.
+3. Run `docker run -p 3000:3000 go-docker` to run the image.
 
 ### How to run th app without docker
 
 1. In your terminal, navigate to the main directory.
-2. Run `go build -o main .` to create the build.
+2. Run `go build -o main ./cmd/main.go` to create the build.
 3. Run `go run ./` to run the build.
 
 
