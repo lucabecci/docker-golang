@@ -1,6 +1,6 @@
 # Test of Docker with Golang.
 
-> Simple example of channels in Golang.
+> Simple example of api rest in docker without db.
 
 ## 1. Pre-requeriments 🛠
 
