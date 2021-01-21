@@ -1,4 +1,5 @@
-FROM golang:alpine
+
+FROM golang:alpine AS builder
 
 # Set necessary environmet variables needed for our image
 ENV GO111MODULE=on \
@@ -25,8 +26,10 @@ WORKDIR /dist
 # Copy binary from build to main folder
 RUN cp /build/main .
 
-# Export necessary port
-EXPOSE 3000
+# Build a small image
+FROM scratch
 
-# Command to run when starting the container
-CMD ["/dist/main"]
+COPY --from=builder /dist/main /
+
+# Command to run
+ENTRYPOINT ["/main"]
