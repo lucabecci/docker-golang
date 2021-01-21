@@ -1,0 +1,1 @@
+> Test of Docker with Golang.
